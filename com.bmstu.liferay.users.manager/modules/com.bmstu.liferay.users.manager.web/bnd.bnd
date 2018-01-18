@@ -1,0 +1,4 @@
+Bundle-Name: com.bmstu.liferay.users.manager.web
+Bundle-SymbolicName: com.bmstu.liferay.users.manager.web
+Bundle-Version: 1.0.0
+Export-Package: com.bmstu.liferay.users.manager.web.constants

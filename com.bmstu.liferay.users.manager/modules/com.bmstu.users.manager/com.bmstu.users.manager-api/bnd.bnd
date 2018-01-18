@@ -1,0 +1,9 @@
+Bundle-Name: com.bmstu.users.manager-api
+Bundle-SymbolicName: com.bmstu.users.manager.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.bmstu.users.manager.exception,\
+	com.bmstu.users.manager.model,\
+	com.bmstu.users.manager.service,\
+	com.bmstu.users.manager.service.persistence
+-includeresource: META-INF/service.xml=../com.bmstu.users.manager-service/service.xml

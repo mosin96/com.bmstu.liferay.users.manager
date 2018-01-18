@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder auto-namespace-tables="true"
+	package-path="com.bmstu.users.manager">
+	<author>Mosin</author>
+	<namespace>UM</namespace>
+	<entity local-service="true" name="TraccarUser" uuid="true">
+
+		<!-- PK fields -->
+		<column name="traccarUserId" primary="true" type="long" />
+
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Status fields -->
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="password" type="String" />
+		<column name="email" type="String" />
+
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="TraccarUserId" return-type="Collection">
+			<finder-column name="traccarUserId" />
+		</finder>
+	</entity>
+
+	<exceptions>
+		<exception>TraccarUserName</exception>
+		<exception>TraccarUserPassword</exception>
+		<exception>TraccarUserEmail</exception>
+	</exceptions>
+</service-builder>
